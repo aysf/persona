@@ -1,0 +1,130 @@
+:root {
+    --primary-dark: #222831;
+    --secondary-dark: #393E46;
+    --primary-light: #FFD369;
+    --secondary-light: #EEEEEE;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* side bar styling */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25vw;
+    background: var(--primary-dark);
+    color: var(--secondary-light);
+    text-align: center;
+}
+
+aside img {
+    width: 50%;
+    border-radius: 50%;
+    margin: 2rem 0 2rem;
+}
+
+aside .quote {
+    font-size: 0.75rem;
+    font-style: italic;
+    padding: 0 2%;
+}
+
+nav {
+    margin-top: 2rem;
+}
+
+nav li a {
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 2rem;
+    color: var(--secondary-light);
+}
+
+nav li:hover {
+    background: var(--secondary-dark);
+}
+
+nav li.active {
+    background: var(--secondary-dark);
+}
+
+
+footer {
+    margin-bottom: 1rem;
+}
+
+
+/* main section configuration */
+
+main {
+    background: var(--secondary-dark);
+    color: var(--secondary-light);
+    padding-left: 25vw;
+}
+
+section {
+    height: 100vh;
+    margin: 0 8%;
+}
+
+section ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    aside {
+        position: relative;
+        display: block;
+        width: 100vw;
+        max-height: 45vh;
+    }
+    aside img {
+        width: 25%;
+        border-radius: 50%;
+        margin: 2rem 0 2rem;
+    }
+    nav li {
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.1rem 0.1rem;
+        color: var(--secondary-light);
+    }
+    nav li a{
+        padding: 0 0.4rem;
+        font-size: 0.8rem;
+    }
+    footer {
+        display: none;
+    }
+    section {
+        margin: 0 2%;
+    }
+    main {
+        padding: 0 2rem;
+        position: relative;
+    }
+}
